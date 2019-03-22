@@ -7,9 +7,9 @@
         <div class="row">
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="contact--info">
-                    <h3>{{$url}}</h3>
+                    <h3>{{$obj->name}}</h3>
                     <p>Alnahas Building, 2 AlBahr St, Tanta</p>
-                    <p>AlGharbia, Egypt.</p>
+                    <p>{!! $obj->body !!}</p>
                     <a class="link--styled" href="#">Get Directions</a>
                 </div>
             </div>

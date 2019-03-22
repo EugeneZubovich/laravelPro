@@ -17,16 +17,16 @@
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Home</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="home-consulting.html">Home Consulting</a>
+                                <a href="{{asset('home-consulting.html')}}">Home Consulting</a>
                             </li>
                             <li>
-                                <a href="home-advisor.html">Home advisor</a>
+                                <a href="{{asset('home-consulting.html')}}">Home advisor</a>
                             </li>
                             <li>
-                                <a href="home-investment.html">Home investment</a>
+                                <a href="{{asset('home-investment.html')}}">Home investment</a>
                             </li>
                             <li>
-                                <a href="home-advisory.html">Home advisory</a>
+                                <a href="{{asset('home-advisory.html')}}">Home advisory</a>
                             </li>
                         </ul>
                     </li>
@@ -37,16 +37,16 @@
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="pages">About</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="page-about.html">About US</a>
+                                <a href="{{asset('about')}}">About US</a>
                             </li>
                             <li>
-                                <a href="page-our-team.html">our team</a>
+                                <a href="{{asset('ourteam')}}">our team</a>
                             </li>
                             <li>
-                                <a href="page-gallery.html">our gallery</a>
+                                <a href="{{asset('gallery')}}">our gallery</a>
                             </li>
                             <li>
-                                <a href="page-contact.html">contacts</a>
+                                <a href="{{asset('contact')}}">contacts</a>
                             </li>
                             <li>
                                 <a href="page-faqs.html">FAQs</a>
@@ -204,7 +204,7 @@
                 <div class="module-container">
                     <!-- Module Consultation  -->
                     <div class="module module-consultation pull-left">
-                        <a class="btn" href="page-contact.html">Consultation</a>
+                        <a class="btn" href="{{asset('page-contact')}}">Consultation</a>
                     </div>				<!-- Module Search -->
                     <div class="module module-search pull-left">
                         <div class="module-icon search-icon">
