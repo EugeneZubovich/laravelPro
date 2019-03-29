@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <form action="{{asset('home')}}" method="post">
+            <form action="{{asset('home')}}" method="post" enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <label for="exampleInputPassword1">Название</label>
@@ -45,7 +45,12 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">Изображение</label>
-                    <input type="file" class="form-control-file" name="image" id="exampleInputFile" aria-describedby="fileHelp">
+                    <input type="file" class="form-control-file" name="image1" id="exampleInputFile" aria-describedby="fileHelp">
+                    @if ($errors->has('image1'))
+                        <span class="alert-danger">
+                            <b>{{$errors->first('image1')}}</b>
+                        </span>
+                    @endif
                     <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
                 </div>
                 <fieldset class="form-group">
@@ -71,6 +76,53 @@
                 </fieldset>
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
+
+            <br><br>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Events</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                @foreach($products as $pr)
+
+                <tr>
+                    <td width="200px">
+                        @if ($pr->image)
+                            <img src="{{asset('uploads/small_'.$pr->image)}}" alt="{{$pr->name}}">
+                        @else
+                            <img src="{{asset('assets/images/logo/logo-dark.png')}}" alt="{{$pr->name}}">
+                        @endif
+                    </td>
+                    <td>{{$pr->name}}</td>
+                    <td>{{$pr->price}}</td>
+                    <td>{{$pr->description}}</td>
+                    <td>{{$pr->status}}</td>
+                    <td><a href="#">&times;</a></td>
+                </tr>
+                @endforeach
+                </tbody>
+            </table>
+
+            <p align="center">
+                {!! $products->links() !!}
+            </p>
+
+
+
+
+
+
+
+
 
         </div>
     </div>
