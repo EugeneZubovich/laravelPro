@@ -24,7 +24,7 @@
                     </div>
 					<div class="clearfix"></div>
 					<ol class="breadcrumb d-flex justify-content-center">
-						<li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
 						<li class="breadcrumb-item active" aria-current="page">blog</li>
 					</ol>
 				</div><!-- .title end -->
@@ -96,7 +96,7 @@
                     </div>
                     <div class="entry-next">
                         <div class="entry-next-content">
-                            <img src="assets/images/blog/thumb/2.jpg" alt="title" />
+                            <img src="{{asset('assets/images/blog/thumb/2.jpg')}}" alt="title" />
                             <div class="entry-desc">
                                 <p>next</p>
                                 <a href="#">The hidden habits that cost you money?</a>
@@ -108,7 +108,7 @@
 
                 <div class="entry-widget entry-bio clearfix">
                     <div class="entry-widget-content">
-                        <img src="assets/images/team/thumb/1.jpg" alt="author" />
+                        <img src="{{asset('assets/images/team/thumb/1.jpg')}}" alt="author" />
                         <div class="entry-bio-desc">
                              <h4>Mahmoud Baghagho</h4>
                             <p>Founded by Begha over many cups of tea at her kitchen table in 2009, our brand promise is simple: to provide powerful digital marketing solutions to small and medium businesses.</p>
@@ -130,7 +130,7 @@
                         <ul class="comments-list">
                             <li class="comment-body">
                                 <div class="avatar">
-                                    <img src="assets/images/team/thumb/2.jpg" alt="avatar" />
+                                    <img src="{{asset('assets/images/team/thumb/2.jpg')}}" alt="avatar" />
                                 </div>
                                 <div class="comment">
                                     <h6>Mohamed Habaza</h6>
@@ -142,7 +142,7 @@
                                 <ul class="comment-children">
                                     <li class="comment-body">
                                         <div class="avatar">
-                                            <img src="assets/images/team/thumb/3.jpg" alt="avatar" />
+                                            <img src="{{asset('assets/images/team/thumb/3.jpg')}}" alt="avatar" />
                                         </div>
                                         <div class="comment">
                                             <h6>Ahmed Hassan</h6>
@@ -219,24 +219,13 @@
 	</div>
 	<div class="widget--content">
 		<ul class="list-unstyled">
-			<li>
-				<a href="#">Strategy & Planning</a>
-			</li>
-			<li>
-				<a href="#">Audit & Evaluation</a>
-			</li>
-			<li>
-				<a href="#">Taxes & Efficiency</a>
-			</li>
-			<li>
-				<a href="#">Estate Planning</a>
-			</li>
-			<li>
-				<a href="#">Finance & Restructuring</a>
-			</li>
-			<li>
-				<a href="#">Insurance</a>
-			</li>
+
+            @foreach($catalogs as $cat)
+                <li>
+                    <a href="#">{{$cat->name}}</a>
+                </li>
+            @endforeach
+            
 		</ul>
 	</div>
 </div> <!-- .widget-categories end -->
@@ -250,7 +239,7 @@
 	<div class="widget--content">
 		<div class="entry">
 			<div class="entry--img">
-				<a href="#"> <img src="assets/images/blog/thumb/1.jpg" alt="title">
+				<a href="#"> <img src="{{asset('assets/images/blog/thumb/1.jpg')}}" alt="title">
 		   <div class="entry--overlay"></div></a>
 			</div>
 			<div class="entry--desc">
@@ -268,7 +257,7 @@
 		<!-- .recent-entry end -->
 		<div class="entry">
 			<div class="entry--img">
-				<a href="#"> <img src="assets/images/blog/thumb/2.jpg" alt="title"><div class="entry--overlay"></div></a>
+				<a href="#"> <img src="{{asset('assets/images/blog/thumb/2.jpg')}}" alt="title"><div class="entry--overlay"></div></a>
 			</div>                                
 			<div class="entry--desc">
 			<div class="entry--meta">
@@ -285,7 +274,7 @@
 		<!-- .recent-entry end -->
 		<div class="entry">
 			<div class="entry--img">
-				<a href="#"> <img src="assets/images/blog/thumb/3.jpg" alt="title"><div class="entry--overlay"></div></a>
+				<a href="#"> <img src="{{asset('assets/images/blog/thumb/3.jpg')}}" alt="title"><div class="entry--overlay"></div></a>
 			</div>                                
 			<div class="entry--desc">
 			<div class="entry--meta">

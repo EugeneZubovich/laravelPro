@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->integer('user_id');
             $table->string('name');
             //TODO переименовать в catalog_id  возможно оставить category 
-            $table->integer('category');
+            $table->integer('catalog_id');
             $table->text('description');
             $table->string('price');
             $table->text('image');

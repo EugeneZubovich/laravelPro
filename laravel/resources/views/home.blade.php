@@ -17,14 +17,13 @@
                 </div>
                 <div class="form-group">
                     <?//TODO отобразить категории из таблицы каталога?>
-                    <label for="exampleSelect1">Категория</label>
-                    <select class="form-control" name="category" id="exampleSelect1">
-                        <option value="1">Категория 1</option>
-                        <option value="2">Категория 2</option>
-                        <option value="3">Категория 3</option>
-                        <option value="4">Категория 4</option>
-                        <option value="5">Категория 5</option>
+                    <label for="exampleSelect1">Каталог</label>
+                    <select class="form-control" name="catalog_id" id="exampleSelect1">
+                        @foreach($catalog as $cat)
+                            <option value="{{$cat->id}}">{{$cat->name}}</option>
+                        @endforeach
                     </select>
+
                 </div>
                 <div class="form-group">
                     <label for="exampleTextarea">Описание</label>

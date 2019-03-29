@@ -6,7 +6,7 @@
             <div class="row clearfix">
                 <div class="col-12 col-md-6 col-lg-3 footer--widget widget-about">
                     <div class="widget-content">
-                        <img class="footer-logo" src="assets/images/logo/logo-small.png" alt="logo">
+                        <img class="footer-logo" src="{{asset('assets/images/logo/logo-small.png')}}" alt="logo">
                         <p>Experienced In Mortgage And Financial Advice!We don’t believe in the sales culture, but instead we believe in the service culture. </p>
                         <div class="social-icons">
                             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>

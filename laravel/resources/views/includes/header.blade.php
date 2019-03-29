@@ -1,7 +1,10 @@
+<?php
+use Illuminate\Support\Facades\Auth;
+?>
 <header id="navbar-spy" class="header header-1 header-transparent">
     <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light navbar-bordered">
         <div class="container">
-            <a class="navbar-brand" href="index-2.html">
+            <a class="navbar-brand" href="/">
                 <img class="logo logo-light" src="{{asset('assets/images/logo/logo-light.png')}}" alt="Consultivo Logo">
                 <img class="logo logo-dark" src="{{asset('assets/images/logo/logo-dark.png')}}" alt="Consultivo Logo">
             </a>
@@ -124,83 +127,52 @@
                     </li>
                     <!-- li end -->
 
-                    <!-- Elements Menu -->
-                    <li class="has-dropdown mega-dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">elements</a>
-                        <ul class="dropdown-menu mega-dropdown-menu">
-                            <li>
-                                <div class="container">
-                                    <div class="row">
-                                        <!-- Column #1 -->
-                                        <div class="col-md-3">
-                                            <ul>
-                                                <li>
-                                                    <a href="elements-testimonials.html"><i class="fa fa-quote-right"></i>testimonials</a>
-                                                </li>
-                                                <li>
-                                                    <a href="elements-video-buttons.html"><i class="fa fa-toggle-right"></i>video buttons</a>
-                                                </li>
-                                                <li>
-                                                    <a href="elements-clients.html"><i class="fa fa-user"></i>clients</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- .col-md-3 end -->
+                    <!-- user Menu -->
+                    <li class="has-dropdown">
 
-                                        <!-- Column #2 -->
-                                        <div class="col-md-3">
-                                            <ul>
-                                                <li>
-                                                    <a href="elements-accordion.html"><i class="fa fa-server"></i>accordion</a>
-                                                </li>
-                                                <li>
-                                                    <a href="elements-cta.html"><i class="fa fa-child"></i>call to action</a>
-                                                </li>
-                                                <li>
-                                                    <a href="elements-contact-form.html"><i class="fa fa-desktop"></i>contact form</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- .col-md-3 end -->
+                        <? if (Auth::user()) {?>
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="shop">
+                                <?=Auth::user()->name;?>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{asset('home')}}">User cabinet</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{asset('home')}}">User cabinet</a>
+                                </li>
+                            </ul>
+                            <?}
+                                else {
+                            ?>
 
-                                        <!-- Column #3 -->
-                                        <div class="col-md-3">
-                                            <ul>
-                                                <li>
-                                                    <a href="elements-team.html"><i class="fa fa-group"></i>team variations</a>
-                                                </li>
+                        <a href="/fessese" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="shop">Register | Log in</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{asset('register')}}">Register</a>
+                                </li>
+                                <li>
+                                    <a href="{{asset('login')}}">Log in</a>
+                                </li>
+                            </ul>
+                        <?}?>
 
-                                                <li>
-                                                    <a href="elements-counters.html"><i class="fa fa-dashboard"></i>counters</a>
-                                                </li>
-                                                <li>
-                                                    <a href="elements-infocards.html"><i class="fa fa-info-circle"></i>info Cards</a>
-                                                </li>
+                    </li>
 
-                                            </ul>
-                                        </div>
-                                        <!-- .col-md-3 end -->
 
-                                        <!-- Column #4 -->
-                                        <div class="col-md-3">
-                                            <ul>
-                                                <li>
-                                                    <a href="elements-featured.html"><i class="fa fa-sliders"></i>featured box</a>
-                                                </li>
-                                                <li>
-                                                    <a href="elements-pricing.html"><i class="fa fa-exchange"></i>pricing</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- .col-md-3 end -->
-                                    </div>
-                                    <!-- .row end -->
-                                </div>
-                                <!-- container end -->
-                            </li>
-                        </ul>
-                        <!-- .mega-dropdown-menu end -->
-                    </li>				</ul>
+                </ul>
                 <div class="module-container">
                     <!-- Module Consultation  -->
                     <div class="module module-consultation pull-left">

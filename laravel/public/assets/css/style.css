@@ -2970,6 +2970,7 @@ table tbody tr td {
 
 .header .navbar.navbar-bordered {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	background-color: #0b0b0b;
 }
 
 .navbar-nav > li {
