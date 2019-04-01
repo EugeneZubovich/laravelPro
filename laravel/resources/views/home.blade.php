@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <form action="{{asset('home')}}" method="post" enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 <div class="form-group">
@@ -55,24 +55,14 @@
                 </div>
                 <fieldset class="form-group">
                     <legend>Статус</legend>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="status" id="optionsRadios1" value="1" checked>
-                            Много: есть в наличии
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="status" id="optionsRadios2" value="2">
-                            Мало: есть в наличии
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="status" id="optionsRadios3" value="3">
-                            Нет в наличии
-                        </label>
-                    </div>
+                    @foreach($productStatus as $st)
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="status_id" id="optionsRadios1" value="{{$st->id}}" checked>
+                                {{$st->name}}
+                            </label>
+                        </div>
+                    @endforeach
                 </fieldset>
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
@@ -105,7 +95,9 @@
                     <td>{{$pr->name}}</td>
                     <td>{{$pr->price}}</td>
                     <td>{{$pr->description}}</td>
-                    <td>{{$pr->status}}</td>
+                    <td>{{\App\Stat::getProductStatus($pr->id)}}
+
+                    </td>
                     <td><a href="#">&times;</a></td>
                 </tr>
                 @endforeach

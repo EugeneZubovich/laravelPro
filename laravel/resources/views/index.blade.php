@@ -225,7 +225,7 @@
                     <a href="#">{{$cat->name}}</a>
                 </li>
             @endforeach
-            
+
 		</ul>
 	</div>
 </div> <!-- .widget-categories end -->

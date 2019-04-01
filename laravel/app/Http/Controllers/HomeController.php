@@ -7,6 +7,7 @@ use App\Libs\Imag;
 use App\Product;
 use Auth;
 use App\Catalog;
+use App\Stat;
 use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
@@ -29,8 +30,9 @@ class HomeController extends Controller
     public function index()
     {
         $catalog = Catalog::all();
+        $productStatus = Stat::all();
         $products = Product::where('user_id',Auth::user()->id)->paginate(10);
-        return view('home', compact('catalog','products'));
+        return view('home', compact('catalog','products','productStatus'));
     }
 
     /**

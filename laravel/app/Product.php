@@ -13,6 +13,6 @@ class Product extends Model
         'description',
         'price',
         'image',
-        'status',
+        'status_id',
     ];
 }
