@@ -53,7 +53,10 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-    public function deleteItem(){
+    public function deleteItem($id){
         //TODO сделать удаление элемента(с проверкой SWAl или growl)
+        $deleteItem = Product::find($id);
+        $deleteItem->delete();
+        return redirect()->back();
     }
 }

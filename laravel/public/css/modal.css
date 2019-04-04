@@ -1,0 +1,19 @@
+.modal-form{
+    display: none;
+    position: fixed;
+    z-index: 1200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+.modal-content{
+    background-color: #8eb4cb;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+    z-index: 1300;
+ }

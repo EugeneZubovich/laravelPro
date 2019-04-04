@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Auth;
                 <img class="logo logo-light" src="{{asset('assets/images/logo/logo-light.png')}}" alt="Consultivo Logo">
                 <img class="logo logo-dark" src="{{asset('assets/images/logo/logo-dark.png')}}" alt="Consultivo Logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -37,7 +38,8 @@ use Illuminate\Support\Facades\Auth;
 
                     <!-- Pages Menu -->
                     <li class="has-dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="pages">About</a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item"
+                           data-hover="pages">About</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{asset('about')}}">About US</a>
@@ -131,42 +133,44 @@ use Illuminate\Support\Facades\Auth;
                     <li class="has-dropdown">
 
                         <? if (Auth::user()) {?>
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="shop">
-                                <?=Auth::user()->name;?>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{asset('home')}}">User cabinet</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="shop">
+                            <?=Auth::user()->name;?>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{asset('home')}}">User cabinet</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{asset('home')}}">User cabinet</a>
-                                </li>
-                            </ul>
-                            <?}
-                                else {
-                            ?>
+                                    Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{asset('home')}}">User cabinet</a>
+                            </li>
+                        </ul>
+                        <?}
+                        else {
+                        ?>
 
-                        <a href="/fessese" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="shop">Register | Log in</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{asset('register')}}">Register</a>
-                                </li>
-                                <li>
-                                    <a href="{{asset('login')}}">Log in</a>
-                                </li>
-                            </ul>
+                        <a href="/fessese" data-toggle="dropdown" class="dropdown-toggle menu-item" data-hover="shop">Register
+                            | Log in</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{asset('register')}}">Register</a>
+                            </li>
+                            <li>
+                                <a href="{{asset('login')}}">Log in</a>
+                            </li>
+                        </ul>
                         <?}?>
 
                     </li>
@@ -177,7 +181,7 @@ use Illuminate\Support\Facades\Auth;
                     <!-- Module Consultation  -->
                     <div class="module module-consultation pull-left">
                         <a class="btn" href="{{asset('page-contact')}}">Consultation</a>
-                    </div>				<!-- Module Search -->
+                    </div>                <!-- Module Search -->
                     <div class="module module-search pull-left">
                         <div class="module-icon search-icon">
                             <i class="lnr lnr-magnifier"></i>
@@ -197,7 +201,7 @@ use Illuminate\Support\Facades\Auth;
                             </div>
                             <a class="module-cancel" href="#"><i class="fa fa-close"></i></a>
                         </div>
-                    </div><!-- .module-search end -->				<!-- Module Cart -->
+                    </div><!-- .module-search end -->                <!-- Module Cart -->
                     <div class="module module-cart pull-left">
                         <div class="module-icon cart-icon">
                             <i class="lnr lnr-cart"></i>
@@ -208,7 +212,8 @@ use Illuminate\Support\Facades\Auth;
                             <div class="cart-overview">
                                 <ul class="list-unstyled">
                                     <li>
-                                        <img class="img-fluid" src="{{asset('assets/images/shop/thumb/1.png')}}" alt="product"/>
+                                        <img class="img-fluid" src="{{asset('assets/images/shop/thumb/1.png')}}"
+                                             alt="product"/>
                                         <div class="product-meta">
                                             <h5 class="product-title">How to Build Habit </h5>
                                             <p class="product-price">1 x $ 18.00</p>
@@ -216,7 +221,8 @@ use Illuminate\Support\Facades\Auth;
                                         <a class="cart-cancel" href="#">cancel</a>
                                     </li>
                                     <li>
-                                        <img class="img-fluid" src="{{asset('assets/images/shop/thumb/2.png')}}" alt="product"/>
+                                        <img class="img-fluid" src="{{asset('assets/images/shop/thumb/2.png')}}"
+                                             alt="product"/>
                                         <div class="product-meta">
                                             <h5 class="product-title">Personal Branding</h5>
                                             <p class="product-price">1 x $ 17.00</p>
@@ -241,7 +247,7 @@ use Illuminate\Support\Facades\Auth;
                             </div>
                         </div>
                     </div>
-                    <!-- .module-cart end -->				</div>
+                    <!-- .module-cart end -->                </div>
             </div>
             <!-- /.navbar-collapse -->
         </div>
