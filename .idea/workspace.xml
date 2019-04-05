@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="131eb5ab-13c1-41ee-aa7b-8e768e3aef59" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/css/modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/css/product_item.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/public/js/modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/modal.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravelPro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelPro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Stat.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Stat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/uploads/2483103458.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/uploads/2483103458.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/uploads/small_2483103458.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/uploads/small_2483103458.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="131eb5ab-13c1-41ee-aa7b-8e768e3aef59" name="Default" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -450,16 +431,15 @@
       <workItem from="1553702722186" duration="8727000" />
       <workItem from="1553855555311" duration="1453000" />
       <workItem from="1553938637074" duration="5479000" />
-      <workItem from="1554321163384" duration="11429000" />
+      <workItem from="1554321163384" duration="11993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36601000" />
+    <option name="totallyTimeSpent" value="37165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
