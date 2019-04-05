@@ -119,7 +119,7 @@
                             <td style="vertical-align: middle">{{$pr->name}}</td>
                             <td style="vertical-align: middle">{{$pr->price}}</td>
                             <td style="vertical-align: middle">{{$pr->description}}</td>
-                            <td style="vertical-align: middle">{{$pr->status_id}}</td>
+                            <td style="vertical-align: middle">{{$pr->getProductStatus->name}}</td>
                             <td style="vertical-align: middle">
                                 <form id="" action="{{ url('home' , $pr->id ) }}" method="POST">
                                     {{ csrf_field() }}

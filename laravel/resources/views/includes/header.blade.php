@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
                 <ul class="navbar-nav ml-auto">
                     <!-- Home Menu-->
                     <li class="has-dropdown active">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Home</a>
+                        <a href="#" data-toggle="dropdown" name="home" class="dropdown-toggle menu-item">@lang('menu.main')</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{asset('home-consulting.html')}}">Home Consulting</a>
@@ -51,7 +51,7 @@ use Illuminate\Support\Facades\Auth;
                                 <a href="{{asset('gallery')}}">our gallery</a>
                             </li>
                             <li>
-                                <a href="{{asset('contact')}}">contacts</a>
+                                <a href="{{asset('contact')}}">{{__('menu.contacts')}}</a>
                             </li>
                             <li>
                                 <a href="page-faqs.html">FAQs</a>

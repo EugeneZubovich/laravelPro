@@ -9,6 +9,6 @@
 
 <div class="modal-form" id="global-modal">
     <div class="modal-content">
-            Content
+
     </div>
 </div>

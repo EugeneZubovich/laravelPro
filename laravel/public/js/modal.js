@@ -5,7 +5,8 @@ var options = {
     data: '',
     selectors: [
         '.show_image',
-        '#global-modal'
+        '#global-modal',
+        '.modal-content'
     ],
     modalsOpt: {
         fastIn: 250,
@@ -24,8 +25,10 @@ setElementEvents();
 
 function setElementEvents() {
     elms['show_image'].on('click', function (e) {
+        var productId =$(this).attr('data-id');
         e.preventDefault();
         showModalForm();
+        getContentById(productId);
     });
 
     elms['global-modal'].on('click', function (e) {
@@ -35,9 +38,35 @@ function setElementEvents() {
 }
 
 function closeModalForm() {
-    elms['global-modal'].fadeOut(options.modalsOpt.fastIn);
+    elms['global-modal'].fadeOut(options.modalsOpt.fastIn, function () {
+        elms['modal-content'].html('');
+    });
+
 }
 
 function showModalForm() {
     elms['global-modal'].fadeIn(options.modalsOpt.fastIn);
+
+}
+
+function getContentById(id){
+    // if (id = ''){
+    //     param = 'test'
+    // }
+    // else {
+    //     param = id;
+    // }
+    var param = '15';
+    $.ajax({
+        type: 'POST',
+        url: "ajax/modal",
+        data: 'id='+id,
+        success: function (data) {
+            elms['modal-content'].append(data)
+        },
+        error: function (msg) {
+            console.log('error');
+            console.log(msg.text);
+        }
+    });
 }

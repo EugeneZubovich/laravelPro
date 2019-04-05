@@ -15,4 +15,8 @@ class Product extends Model
         'image',
         'status_id',
     ];
+
+    public function getProductStatus(){
+        return $this->belongsTo('App\Stat','status_id');
+    }
 }
