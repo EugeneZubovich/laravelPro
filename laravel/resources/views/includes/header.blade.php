@@ -39,22 +39,22 @@ use Illuminate\Support\Facades\Auth;
                     <!-- Pages Menu -->
                     <li class="has-dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item"
-                           data-hover="pages">About</a>
+                           data-hover="pages">@lang('menu.about')</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="{{asset('about')}}">About US</a>
+                                <a href="{{asset('about')}}">@lang('menu.about')</a>
                             </li>
                             <li>
-                                <a href="{{asset('ourteam')}}">our team</a>
+                                <a href="{{asset('ourteam')}}">@lang('menu.team')</a>
                             </li>
                             <li>
-                                <a href="{{asset('gallery')}}">our gallery</a>
+                                <a href="{{asset('gallery')}}">@lang('menu.gallery')</a>
                             </li>
                             <li>
-                                <a href="{{asset('contact')}}">{{__('menu.contacts')}}</a>
+                                <a href="{{asset('contact')}}">@lang('menu.contacts')</a>
                             </li>
                             <li>
-                                <a href="page-faqs.html">FAQs</a>
+                                <a href="{{asset('faq')}}">@lang('menu.faq')</a>
                             </li>
                             <li>
                                 <a href="page-consultation.html">consultation</a>
@@ -64,7 +64,7 @@ use Illuminate\Support\Facades\Auth;
                     <!-- li end -->
                     <!-- Services Menu-->
                     <li class="has-dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">services</a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">@lang('menu.services')</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="page-services.html">services grid</a>
@@ -138,13 +138,13 @@ use Illuminate\Support\Facades\Auth;
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="{{asset('home')}}">User cabinet</a>
+                                <a href="{{asset('home')}}">@lang('menu.cabinet')</a>
                             </li>
                             <li>
                                 <a href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    Logout
+                                    @lang('auth.logout')
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                       style="display: none;">
@@ -152,11 +152,11 @@ use Illuminate\Support\Facades\Auth;
                                 </form>
                             </li>
                         </ul>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{asset('home')}}">User cabinet</a>
-                            </li>
-                        </ul>
+                        {{--<ul class="dropdown-menu">--}}
+                            {{--<li>--}}
+                                {{--<a href="{{asset('home')}}">User cabinet</a>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
                         <?}
                         else {
                         ?>

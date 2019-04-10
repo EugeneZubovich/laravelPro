@@ -9,5 +9,12 @@ return [
     'main' => 'Main',
     'home' => 'Home',
     'contacts' => 'Contacts',
-    'gallery' => 'Our Gallery'
+    'gallery' => 'Our Gallery',
+    'faq' => 'FAQs',
+    'team' => 'Out Team',
+    'about' => 'About us',
+    'services' => 'Services',
+    'catalog' => 'Catalog',
+    'cabinet' => 'User Cabinet',
+
 ];

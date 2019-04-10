@@ -13,15 +13,15 @@
 
 @section('content')
     <div class="container">
-        <div class="new_product_header"> Добавить новый товар</div>
+        <div class="new_product_header">@lang('addProduct.addNewItem')</div>
         <div class="row">
             <div class="col-md-12">
                 <form action="{{asset('home')}}" method="post" enctype="multipart/form-data">
                     {!! csrf_field() !!}
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Название</label>
+                        <label for="exampleInputPassword1">@lang('addProduct.name')</label>
                         <input type="text" name="name" class="form-control" id="exampleInputPassword1"
-                               placeholder="Название">
+                               placeholder="@lang('addProduct.name')">
                         @if ($errors->has('name'))
                             <span class="alert-danger">
                             <b>{{$errors->first('name')}}</b>
@@ -29,8 +29,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <?//TODO отобразить категории из таблицы каталога?>
-                        <label for="exampleSelect1">Каталог</label>
+                        <label for="exampleSelect1">@lang('addProduct.catalog')</label>
                         <select class="form-control" name="catalog_id" id="exampleSelect1">
                             @foreach($catalog as $cat)
                                 <option value="{{$cat->id}}">{{$cat->name}}</option>
@@ -39,7 +38,7 @@
 
                     </div>
                     <div class="form-group">
-                        <label for="exampleTextarea">Описание</label>
+                        <label for="exampleTextarea">@lang('addProduct.desc')</label>
                         <textarea class="form-control" name="description" id="exampleTextarea" rows="3"></textarea>
                         @if ($errors->has('description'))
                             <span class="alert-danger">
@@ -48,9 +47,9 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Цена</label>
+                        <label for="exampleInputPassword1">@lang('addProduct.price')</label>
                         <input type="text" class="form-control" name="price" id="exampleInputPassword1"
-                               placeholder="Цена">
+                               placeholder="@lang('addProduct.price')">
                         @if ($errors->has('price'))
                             <span class="alert-danger">
                             <b>{{$errors->first('price')}}</b>
@@ -58,7 +57,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputFile">Изображение</label>
+                        <label for="exampleInputFile">@lang('addProduct.img')</label>
                         <input type="file" class="form-control-file" name="image1" id="exampleInputFile"
                                aria-describedby="fileHelp">
                         @if ($errors->has('image1'))
@@ -71,7 +70,7 @@
                         </small>
                     </div>
                     <fieldset class="form-group">
-                        <legend>Статус</legend>
+                        <legend>@lang('addProduct.status')</legend>
                         @foreach($productStatus as $st)
                             <div class="form-check">
                                 <label class="form-check-label">
@@ -82,7 +81,7 @@
                             </div>
                         @endforeach
                     </fieldset>
-                    <button type="submit" class="btn btn-primary">Добавить</button>
+                    <button type="submit" class="btn btn-primary">@lang('main.btn.add')</button>
                 </form>
 
                 <br><br>
@@ -123,7 +122,7 @@
                             <td style="vertical-align: middle">
                                 <form id="" action="{{ url('home' , $pr->id ) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="btn btn-danger">Delete item</button>
+                                    <button type="submit" class="btn btn-danger">@lang('main.btn.deleteItem')</button>
                                 </form>
                             </td>
                         </tr>
