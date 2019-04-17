@@ -19,4 +19,8 @@ class Product extends Model
     public function getProductStatus(){
         return $this->belongsTo('App\Stat','status_id');
     }
+
+    public function catalog(){
+        return $this->belongsTo('App\Catalog');
+    }
 }

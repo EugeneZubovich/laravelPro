@@ -3,6 +3,30 @@
 @section('script')
     @parent
     <script src="{{asset('js/modal.js')}}"></script>
+    <script>
+        $('.deleteBtn').on('click', function (e) {
+            e.preventDefault();
+            var form = $(this);
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.value) {
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                );
+                form.parent('form').submit();
+            }
+        })
+        })
+    </script>
     @endsection
 
 @section('styles')
@@ -47,7 +71,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">@lang('addProduct.price')</label>
+                        <label for="exampleInputPassword1" data-toggle="tooltip" data-html="true" data-placement="right" title="<ul><li>1</li></ul>">@lang('addProduct.price')</label>
                         <input type="text" class="form-control" name="price" id="exampleInputPassword1"
                                placeholder="@lang('addProduct.price')">
                         @if ($errors->has('price'))
@@ -122,7 +146,7 @@
                             <td style="vertical-align: middle">
                                 <form id="" action="{{ url('home' , $pr->id ) }}" method="POST">
                                     {{ csrf_field() }}
-                                    <button type="submit" class="btn btn-danger">@lang('main.btn.deleteItem')</button>
+                                    <button type="submit" class="deleteBtn btn btn-danger">@lang('main.btn.deleteItem')</button>
                                 </form>
                             </td>
                         </tr>

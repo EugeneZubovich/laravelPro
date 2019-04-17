@@ -248,6 +248,16 @@ use Illuminate\Support\Facades\Auth;
                         </div>
                     </div>
                     <!-- .module-cart end -->                </div>
+                    <div class="module module-lang">
+
+
+                        <label for="">{{\App::getLocale()}} </label>
+                        @if(\App::getLocale() == 'ru')
+                            <a href="{{asset('/?lang=en')}}" class="dropdown-item"> en </a>
+                        @else
+                            <a href="{{asset('/?lang=ru')}}" class="dropdown-item"> ru</a>
+                            @endif
+                    </div>
             </div>
             <!-- /.navbar-collapse -->
         </div>

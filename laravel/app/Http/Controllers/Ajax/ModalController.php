@@ -1,19 +1,21 @@
 <?php
 
 namespace App\Http\Controllers\Ajax;
+
 use App\Http\Controllers\Controller;
 use App\Product;
+
 class ModalController extends Controller
 {
     //
-    public function postIndex(){
-        if (isset($_POST) && !$_POST['id'] == ''){
-//            print_r('<input class="input-group-btn" value="'.$_POST['data'].'">');
+    public function postIndex()
+    {
+        if (isset($_POST) && !$_POST['id'] == '') {
             $id = (int)$_POST['id'];
             $obj = Product::find($id);
-            return view('ajax.modal',compact('obj'));
-        }
-        else{
+
+            return view('ajax.modal', compact('obj'));
+        } else {
             print_r($_POST['Error']);
         }
 

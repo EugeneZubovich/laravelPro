@@ -21,6 +21,7 @@
         ============================================= -->
     <link href="{{asset('assets/css/external.css')}}" rel="stylesheet">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
     @show
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->

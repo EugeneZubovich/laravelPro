@@ -2,9 +2,6 @@
 @section('script')
     @parent
     <script src="{{asset('assets/js/plugins.js')}}"></script>
-    <script>
-        console.log('Work it!');
-    </script>
     @stop
 @section('content')
 
