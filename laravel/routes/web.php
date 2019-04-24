@@ -10,7 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+
 Route::get('/cookie_clear','SettingsController@cookieClear');
+
+
 Route::group(['middleware' => ['lang']], function (){
     Route::get('/', "BaseController@getIndex");
 });
@@ -24,5 +33,7 @@ Route::post('ajax/modal', 'Ajax\ModalController@postIndex');
 
 //default
 Route::get('{url}', 'StaticController@getIndex');
+
+
 
 

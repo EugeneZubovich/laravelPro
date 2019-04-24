@@ -168,6 +168,10 @@ return [
          * Package Service Providers...
          */
         Intervention\Image\ImageServiceProvider::class,
+
+        // Package Service Providers
+        TCG\Voyager\VoyagerServiceProvider::class,
+        // ...
         /*
          * Application Service Providers...
          */
