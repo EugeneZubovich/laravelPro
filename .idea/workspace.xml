@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="131eb5ab-13c1-41ee-aa7b-8e768e3aef59" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/laravel/resources/assets/js/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravelPro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelPro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="131eb5ab-13c1-41ee-aa7b-8e768e3aef59" name="Default" comment="" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -296,7 +282,7 @@
       <path value="$PROJECT_DIR$/laravel/vendor/tcg/voyager" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="816" />
@@ -316,17 +302,6 @@
             <path>
               <item name="domains" type="b2602c69:ProjectViewProjectNode" />
               <item name="domains" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="domains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domains" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="domains" type="b2602c69:ProjectViewProjectNode" />
-              <item name="domains" type="462c0819:PsiDirectoryNode" />
-              <item name="laravel" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -421,16 +396,15 @@
       <workItem from="1555423450058" duration="3345000" />
       <workItem from="1555675527499" duration="640000" />
       <workItem from="1555696830548" duration="4186000" />
-      <workItem from="1556122763136" duration="5461000" />
+      <workItem from="1556122763136" duration="5541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76919000" />
+    <option name="totallyTimeSpent" value="76999000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32605177" />
       <window_info anchor="bottom" id="TODO" order="6" />
